@@ -1,0 +1,35 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+void subarray(int a[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            for(int k=i;k<=j;k++){
+                cout<< a[k]<< " ";
+            }
+            cout<< endl;
+        }
+    }
+}
+void maxsum(int a[],int n){
+    int Max_sum= INT_MIN;
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+        int sum=0;
+            for(int k=i;k<=j;k++){
+                sum+= a[k];
+    }
+    if(Max_sum<sum){
+        Max_sum=sum;
+    }
+}
+}
+cout<< Max_sum<<endl;
+}
+int main() {
+    int a[]={1,2,3,4,10,};
+    int n= sizeof (a)/ sizeof(int);
+   subarray(a,n);
+   maxsum(a,n);
+    return 0;
+}
